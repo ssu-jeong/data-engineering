@@ -32,6 +32,8 @@
 
 - 단계2: 인스턴스 유형 선택
 
+Kafka Server, producer, consumer의 경우 리소스를 좀 사용하기 때문에 medium!
+
 <img src="https://user-images.githubusercontent.com/86764734/147474112-79bbe6e7-76f2-42b0-8e55-4afd2459cd8a.png"/>
 
 - 단계3: 인스턴스 세부 정보 구성
