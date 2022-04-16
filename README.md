@@ -21,7 +21,7 @@
 
 ### 목차
 
-01. 데이터수집 파이프라인구축
+#### 01. 데이터수집 파이프라인구축
 
 Chapter1.데이터파이프라인의이해
 
@@ -37,7 +37,7 @@ Chapter6.데이터파이프라인흐름의이해
 
 Chapter7.Api-Gateway,KinesisStream,Firehose,S3의이해
 
-02. 데이터분석 파이프라인구축
+#### 02. 데이터분석 파이프라인구축
 
 Chapter1. 데이터분석
 
@@ -51,7 +51,7 @@ Chapter5. 데이터분석 실습
 
 Chapter6. Zeppelin의 Cron 기능 활용
 
-03. 데이터분석및 시각화 파이프라인구축
+#### 03. 데이터분석및 시각화 파이프라인구축
 
 Chapter1. 데이터 분석 및 시각화
 
@@ -61,7 +61,7 @@ Chapter3. Tableau 시각화방안
 
 Chapter4. elasticsearch 실습
 
-04. 데이터 파이프라인 Extension
+#### 04. 데이터 파이프라인 Extension
 
 Chapter1. 데이터 파이프라인 Extension 학습내용
 
