@@ -68,3 +68,32 @@ A파티션 키는 스트림 내에서 샤드별로 데이터를 그룹화하는 
 
 **시퀀스 번호**
 Kinesis Data Stream에서 내부적으로 할당하는 시퀀스 번호 .
+
+---
+
+### Kinesis Data Firehose?
+
+실시간 스트리밍 데이터를 제공하기 위한 완전 관리형 서비스. 
+생산자(데이터 입력)-Kinesis Data Firehose-소비자
+같이 Kinesis Data Stream과 동일한 입출력 개념으로 사용되며 전송과정에서 데이터 변환이 가능, AWS의 S3,RDS 등을 소비자로 사용하기에 간쳔하게 구성되어 있다.
+
+![1_LxcE-A0eLCWgiI2R1BKNOA](https://user-images.githubusercontent.com/86764734/165654138-98496981-ea19-447a-a8cb-4eaf8e2d2fd0.png)
+
+### Kinesis Data Firehose 에서 사용되는 개념
+
+**기록**
+데이터 생산자가 Kinesis Data Firehose 전송 스트림으로 보내는 관심 데이터. (레코드의 최대 크기는 1MB)
+
+**데이터 생산자**
+생산자는 레코드를 Kinesis Data Firehose 전송 스트림으로 보낸다. 예를 들어 로그 데이터를 전송 스트림으로 보내는 웹서버는 데이터 생산자.
+또한 게존 Kinesis Data Stream에서 데이터를 자동으로 읽고 대상으로 로드하도록 Kinesis Data Firehose 전송 스트림을 구성할 수 있다. 
+
+**버퍼 크기 및 버퍼 간격**
+Kinesis Data Firehose는 수신 스트리밍 데이터를 특정 크기로 또는 특정 기간 동안 버퍼링하여 대상으로 전달. 
+(버퍼크기는 MB 단위이고 버퍼간격은 초 단위.)
+
+---
+
+### Kinesis Data Stream 사용법
+Kinesis Data Stream을 사용하기 위한 (인스턴스?)생성은 어렵지 않지만 이후 Consumer를 설정하기 위한, 즉 실시간 스트림 전송이 되는 데이터를 처리/전송/소비하기 위한 설정은 다양한 방식이 있다. 
+
