@@ -261,6 +261,38 @@
 
     ![images_swhan9404_post_35328770-0f26-43e3-a833-332c8b1d576f_Untitled (9)](https://user-images.githubusercontent.com/86764734/166092438-07998b2a-5b4a-477b-a5b8-f888caa2121c.png)
 
+### CloudWatch 모니터링
+
+- Amazon CloudWatch는 Amazon Web Services(AWS) 리소스와 AWS에서 실시간으로 실행 중인 애플리케이션을 모니터링
+
+- 지표를 감시해 알림을 보내거나 임계값을 위반한 경우 모니터링 중인 리소스를 자동으로 변경하는 경보를 생성할 수 있음
+
+#### cloudWatch를 통한 인스턴스 모니터링
+
+- Amazon EC2는 측정치를 Amazon CloudWatch로 전송
+
+    - AWS Management 콘솔, AWS CLI 또는 API를 사용하여 Amazon EC2가 CloudWatch에 전송하는 측정치를 나열할 수 있음
+
+    - 기본적으로 각 데이터 요소는 인스턴스의 시작 시간 이후 5분간 활동을 다룸
+
+    - 세부 모니터링을 활성화한 경우 각 데이터 요소는 시작 시간부터 1분간 활동을 다룸
+
+- 지표 목록
+
+    - 인스턴스 지표
+
+    
+    - CPU 크레딧 지표
+    
+    - Nitro 기반 인스턴스용 
+    
+    - Amazon EBS 지표
+    
+    - 상태 확인 지표
+    
+    - 트래픽 미러링 지표
+    
+    - Amazon EC2 사용량 지표
 
 ### Referance
 
