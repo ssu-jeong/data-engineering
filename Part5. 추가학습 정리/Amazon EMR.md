@@ -75,3 +75,12 @@ Amazon EMR은 클러스터의 노드를 모니터링하고 장애가 발생할 �
 Amazon EMR은 클러스터가 자동 또는 수동으로 종료되는지 여부를 제어하는 구성 옵션을 제공. 클러스터가 자동으로 종료되도록 구성할 경우 모든 단계가 완료된 후 클러스터가 종료. 
 
 또한 종료 방지 기능을 구성하여 처리 중 오류나 문제로 인해 클러스터의 인스턴스가 종료되는 것을 방지. 종료 방지 기능을 활성화한 경우 종료 전에 인스턴스에서 데이터를 복구할 수 있다.
+
+### Reference
+
+---
+
+- [Amazon EMR](https://docs.aws.amazon.com/ko_kr/emr/latest/ManagementGuide/emr-mgmt.pdf#emr-what-is-emr)
+
+
+
