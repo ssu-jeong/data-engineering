@@ -4,9 +4,13 @@
 
 ### 1. SQL 개요, SQL 커맨드들
 
+---
+
 - SQL은 Structured Query Language(구조적 질의 언어)의 줄임말로, 관계형 데이터베이스 시스템(RDBMS)에서 자료를 관리 및 처리하기 위해 설계된 언어
 
-### 2. SELECT(1)
+### SELECT
+
+---
 
 - SELECT
 
@@ -50,8 +54,6 @@ ORDER BY 2: AVG(Total) 필드를 기준으로 오름차순 정렬
     이 때, 결과 집합을 정렬하기 위해 ORDER BY절을 SELECT문에 추가!
 
 - WHERE: 컨디션으로 필터를 하겠다는 의미
-
-### 3. SELECT(2)
 
 
 ```SQL
@@ -104,7 +106,9 @@ ORDER BY SUM(salary) DESC;
 <img width="654" alt="스크린샷 2022-07-11 오후 2 28 40" src="https://user-images.githubusercontent.com/86764734/178269612-e654ca1b-561a-4eec-a562-d9f15b45af2d.png">
 ---
 
-### 4. JOIN(1) 
+### JOIN
+
+--- 
 
 <img width="843" alt="JOIN들" src="https://user-images.githubusercontent.com/86764734/178269631-24f4995a-4570-40ce-aed7-4d0060abe5ce.png">
 
@@ -154,7 +158,6 @@ GROUP BY
 
 <img width="764" alt="스크린샷 2022-07-11 오후 3 58 47" src="https://user-images.githubusercontent.com/86764734/178271347-b5f2a706-9d76-4433-9db1-e241bc84a0f5.png">
 
-### 5. JOIN(2)
 
 ```SQL
 -- LEFT JOIN 
@@ -253,16 +256,15 @@ RIGHT JOIN
 	People p ON af.playerID = p.playerID
 ```
 
+
+### 데이터 타입들 및 키 값들 & 데이터베이스 테이블 생성
+
 ---
-### 6. 데이터 타입들 및 키 값들
 
 - Primary Key
 - Foreign Key
 - Unique
     - 중복되는 값이 들어오지 못하게
-
-
-### 7. 데이터베이스 테이블 생성
 
 ```sql
 -- Table 생성
@@ -289,7 +291,9 @@ SELECT * FROM mytable2;
 <img width="1047" alt="스크린샷 2022-07-11 오후 8 39 22" src="https://user-images.githubusercontent.com/86764734/178269824-e3771342-988c-44a4-a81c-140be3511814.png">
 ---
 
-### 8. UPDATE, REPLACE, INSERT
+### UPDATE, REPLACE, INSERT
+
+---
 
 ```sql
 -- INSERT
@@ -347,6 +351,83 @@ INSERT INTO mytable2 (id, name, dabut) VALUES ('7', 'ssu', '2022-07-14');
 
 <img width="882" alt="스크린샷 2022-07-11 오후 9 55 32" src="https://user-images.githubusercontent.com/86764734/178274363-6dd33760-9355-4bf3-870a-951d06e7b367.png">
 
-s
+### DELETE, ALTER, DROP
+
+---
+
+```sql
+-- DELETE
+	-- mytable2에서 id가 1인 row 삭제
+DELETE FROM mytable2 WHERE id = 1;
+
+-- 만약 WHERE을 통해 지정해주지 않으면 테이블전체가 삭제되니까 조심!!
+DELETE FROM mytable2;
+```
+
+```sql
+-- ALTER
+		-- TABLE 이름 변경
+
+ALTER TABLE mytable2 RENAME TO players;
+
+SELECT * FROM mytable2;
+```
+
+```sql
+-- COLUMN 추가
+
+ALTER TABLE players ADD COLUMN DAB date;
+
+SELECT * FROM players;
+```
+
+```sql
+-- DROP
+DROP TABLE mytable;
+SELECT * FROM mytable;
+```
+---
+
+### Functions
+
+---
+
+```sql
+
+-- character
+SELECT * FROM players;
+
+-- SUBSTRING 1번 부터 2번까지 가져온다
+SELECT SUBSTR(name, 1, 2) FROM players; 
+
+-- case sensitive
+SELECT UPPER(name) FROM players;
+ 
+-- LENGTH
+SELECT LENGTH(name) FROM players;
+
+-- MAX, AVG, COUNT, SUM
+SELECT MAX(LENGTH(name)) FROM players;
+```
+
+```sql
+-- DATE
+SELECT DATE('NOW');
+
+SELECT CURRENT_TIMESTAMP;
+SELECT DATE(CURRENT_TIMESTAMP);
+
+-- 1일을 추가해
+SELECT DATETIME(CURRENT_TIMESTAMP, '+1 DAY')
+
+-- CASE WHEN
+SELECT id, name,
+ CASE WHEN
+	name = 'hello' THEN 'OK'
+ WHEN name = 'haha' THEN 'OK2'
+ ELSE 'NOT OK'
+ END AS 'name ok', dabut
+FROM players;
+```
 
 
