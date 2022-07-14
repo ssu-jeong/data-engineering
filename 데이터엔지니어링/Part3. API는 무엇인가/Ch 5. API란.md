@@ -1,4 +1,4 @@
-### REST API의 정의와 예제들
+## REST API의 정의와 예제들
 ---
 
 >#### Application Programming Interface
@@ -24,7 +24,7 @@
 
 이런 식으로 데이터도 주고 받을 수 있다. 
 
-#### Authorization
+### Authorization
 
 ---
 
